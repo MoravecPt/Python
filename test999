@@ -1,1 +1,18 @@
-print('hello')
+from random import choice
+import string
+
+get1 = input("enter text:")[:20]
+
+for x in range(len(get1)+1):
+    y = choice(string.punctuation)
+    if y=="{" or y=="}":
+        y = "!"
+    news1 = "{:"+str(y)+"^25}"
+    print(news1.format(get1[:x]))
+
+for x in range(len(get1)+1):
+    y = choice(string.punctuation)
+    if y=="{" or y=="}":
+        y = "!"
+    news1 = "{:"+str(y)+"^25}"
+    print(news1.format(get1[x]))
